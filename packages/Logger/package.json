@@ -1,0 +1,20 @@
+{
+  "name": "@k8s-api-devs/logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./Logger.ts",
+  "types": "./Logger.ts",
+  "license": "MIT",
+  "keywords": [],
+  "author": {
+    "name": "Angel Cevallos - Pr1m4ryDev",
+    "email": "primaryomega1@gmail.com",
+    "github": "@Pr1m4ryDev"
+  },
+  "scripts": {
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node-esm ./Logger.ts\""
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

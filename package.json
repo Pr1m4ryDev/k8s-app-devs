@@ -1,0 +1,56 @@
+{
+  "name": "k8s-app-devs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "keywords": [
+    "NodeJs",
+    "ReactJs",
+    "Typescript",
+    "Kubernetes",
+    "Microservices",
+    "Docker"
+  ],
+  "author": {
+    "name": "Angel Cevallos - Pr1m4ryDev",
+    "email": "primaryomega1@gmail.com",
+    "github": "@Pr1m4ryDev"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-promise-router": "^4.1.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^3.0.2",
+    "turbo": "^1.10.16"
+  }
+}

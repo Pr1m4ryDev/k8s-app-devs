@@ -1,0 +1,21 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/server.js",
+  "license": "MIT",
+  "keywords": [],
+  "author": {
+    "name": "Angel Cevallos - Pr1m4ryDev",
+    "email": "primaryomega1@gmail.com",
+    "github": "@Pr1m4ryDev"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node-esm src/server.ts\""
+  },
+  "dependencies": {
+    "@k8s-api-devs-back/logger": "*",
+    "express-http-proxy": "^1.6.3"
+  }
+}
