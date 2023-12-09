@@ -3,7 +3,6 @@ import http from "http";
 import { HttpMiddlewareProvider } from "./MiddlewaresProvider";
 import { InitLogger, IOptions } from "@k8s-api-devs-back/logger";
 import { init as initLocals } from "./LocalsProvider";
-import { ProxyProvider } from "./ProxyProvider";
 
 export const server = {
   httpServer: null as http.Server | null,
@@ -22,12 +21,9 @@ export const ApplicationProvider = async (): Promise<Express> => {
 
   HttpMiddlewareProvider(app, Stream)();
 
-  ProxyProvider(app)();
-
   const port = config.PORT;
   server.httpServer = app.listen(port, () => {
     console.clear();
-    Logger.debug(config);
     Logger.info(`🚀 Server started on http://localhost:${port}/ `);
   });
 

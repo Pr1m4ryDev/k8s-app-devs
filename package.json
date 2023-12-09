@@ -20,7 +20,8 @@
   "private": true,
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo build"
+    "build": "turbo build",
+    "lint": "eslint . --ext .ts"
   },
   "workspaces": [
     "apps/*",

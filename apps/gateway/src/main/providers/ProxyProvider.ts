@@ -10,7 +10,7 @@ export const ProxyProvider = (express: Application) => (): Application => {
     proxy(`http://localhost:${config.PORT_DEVS}`)
   );
   express.use(
-    `/api/v1/repositories`,
+    "/api/v1/repositories",
     proxy(`http://localhost:${config.PORT_REPOS}`)
   );
 
