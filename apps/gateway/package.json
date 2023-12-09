@@ -17,5 +17,8 @@
   "dependencies": {
     "@k8s-api-devs-back/logger": "*",
     "express-http-proxy": "^1.6.3"
+  },
+  "devDependencies": {
+    "@types/express-http-proxy": "^1.6.6"
   }
 }
