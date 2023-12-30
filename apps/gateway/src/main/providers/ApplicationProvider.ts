@@ -27,7 +27,6 @@ export const ApplicationProvider = async (): Promise<Express> => {
   const port = config.PORT;
   server.httpServer = app.listen(port, () => {
     console.clear();
-    Logger.debug(config);
     Logger.info(`🚀 Server started on http://localhost:${port}/ `);
   });
 

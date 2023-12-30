@@ -18,12 +18,14 @@ const config = () => {
     "/",
     "-"
   )}-${dayjs().tz("America/Guayaquil").format("YYYYMMDD")}.log`;
+  const APP_SECRET = process.env.APP_SECRET;
 
   return {
     PORT,
     NODE_ENV,
     APP_NAME,
     FILE_NAME,
+    APP_SECRET,
   };
 };
 

@@ -1,0 +1,21 @@
+FROM postgres:16.1-alpine3.19
+
+# Instalar locales en Alpine Linux
+RUN apk --no-cache add tzdata && \
+    cp /usr/share/zoneinfo/UTC /etc/localtime && \
+    echo "UTC" > /etc/timezone && \
+    apk del tzdata && \
+    apk --no-cache add --virtual .locale-build gettext && \
+    mv /usr/bin/envsubst /tmp/ && \
+    runDeps="$( \
+    scanelf --needed --nobanner /tmp/envsubst \
+    | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }' \
+    | xargs -r apk info --installed \
+    | sort -u \
+    )" && \
+    apk add --virtual .locale-rundeps $runDeps && \
+    apk del .locale-build && \
+    mv /tmp/envsubst /usr/local/bin/ && \
+    apk del .locale-rundeps
+
+ENV LANG en_US.utf8

@@ -1,5 +1,5 @@
 {
-  "name": "@k8s-api-devs/logger",
+  "name": "@k8s-api-devs/jwt",
   "version": "1.0.0",
   "description": "",
   "main": "./Logger.ts",
